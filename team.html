@@ -56,13 +56,13 @@
                     <h3 class="feedback">Др. Лайош Пак 🇰🇷</h3> 
                     <p>Кардиолог. Специализация в диагностике и лечении сердечно-сосудистых заболеваний.</p>
                     <p><strong>Тел:</strong> +976 8811 4455</p>
-                    <img src="img/04e8e3f2c58b4aaf8acac7917638d4a5.png" alt="Description of image" width="152" height="216">
+                    <img src="img/04e8e3f2c58b4aaf8acac7917638d4a5.png" alt="Description of image" width="100" height="130">
                 </section>
                 <section class="team">
                     <h3 class="feedback">Сувилагч Ариунцэцэг Д. 🇲🇳</h3>
                     <p>Главная медсестра. Ответственна за уход и поддержку пациентов.</p>
                     <p><strong>Тел:</strong> +976 7711 6677</p>
-                    <img src="img/letoltes.jpeg" alt="Description of image" width="152" height="200">
+                    <img src="img/letoltes.jpeg" alt="Description of image" width="100" height="130">
                 </section>
             </main>
             <hr>
@@ -77,5 +77,18 @@
         <footer class="lowfooter">
             <p>𑪞 2025 Орон бүхний пролетари нар нэгдэгтүн!</p>
         </footer>
+        
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+    
+        function showNextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+    
+        setInterval(showNextSlide, 3000); // Change every 3 seconds
+    </script>
     </body>
 </html>
