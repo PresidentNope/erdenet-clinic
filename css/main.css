@@ -85,6 +85,13 @@ abbr {
     flex: 1 1 calc(50% - 20px); /* Two columns with gap */
     max-width: calc(50% - 20px);
     box-sizing: border-box;
+}   
+iframe {
+    border: none;
+    width: 90%;
+    max-width: 640px;
+    height: 800px;
+    margin-top: 20px;
 }
 
 .team-container {
