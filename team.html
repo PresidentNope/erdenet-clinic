@@ -7,10 +7,20 @@
         <meta name="keywords" content="диагностика, лечение, клиника, эрдэнэт">
         <link rel="stylesheet" href="css/main.css">
         <link rel="icon" type="image/x-icon" href="img/Mn_coa_erdenet.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            html {
+                margin: 0 auto;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                background-image: url("img/altbg.png");
+                background-color: rgb(36, 36, 36);
+                color: aliceblue;
+            }
+        </style>
     </head>
     <body>
             <header>  
-                <h1>Эрдэнэт Клиник</h1>
+                <h1>Эрдэнэт Клиник 𑪞</h1>
                 <img src="img/mongoliin_ulaan_zagalmai_niigemleg.png" alt="Монгольский Красный Крест" width="150" height="150">
                 <div class="feed">
                     <p> 
@@ -29,6 +39,9 @@
                             <a href="main.html">Главная</a>
                         </li>
                         <li class="menusel">
+                            <a href="team.html#appoint">Запись</a>
+                        </li>
+                        <li class="menusel">
                             <a href="sip.html">Услуги и Цены</a>
                         </li>
                         <li class="menusel">
@@ -42,28 +55,106 @@
             </header>
             <hr>
             <main>
+                <input type="text" id="filterInput" placeholder="Поиск по специализации или имени..." style="margin: 1rem; padding: 0.5rem; width: 90%;">
                 <section>
                     <h2>Наша команда</h2>
                     <p>В нашей клинике работают опытные специалисты, которые каждый день делают всё возможное для вашего здоровья.</p>
                 </section>
-                <section class="team">
-                    <h3 class="feedback">Др. Батбаяр Ч. 🇲🇳</h3>
-                    <p>Главный врач. Более 20 лет опыта в области внутренней медицины.</p>
-                    <p><strong>Тел:</strong> +976 9911 2233</p>
-                    <img src="img/skynews-jackie-chan-2019_6515463.jpg" alt="Description of image" width="300" height="156">
+                <!-- team name, specialization whatevah -->
+                <section class="team-container">
+                    <div class="team" data-specialization="внутренняя медицина">
+                        <h3 class="feedback">Др. Батбаяр Ч.</h3>
+                        <p>Главный врач. Более 20 лет опыта в области внутренней медицины.</p>
+                        <p><strong>Тел:</strong> +976 9911 2233</p>
+                        <img src="img/skynews-jackie-chan-2019_6515463.jpg" alt="Description of image" width="300" height="156">
+                    </div>
+
+                    <div class="team" data-specialization="кардиология">
+                        <h3 class="feedback">Др. Лайош Пак</h3> 
+                        <p>Кардиолог. Специализация в диагностике и лечении сердечно-сосудистых заболеваний.</p>
+                        <p><strong>Тел:</strong> +976 8811 4455</p>
+                        <img src="img/04e8e3f2c58b4aaf8acac7917638d4a5.png" alt="Description of image" width="100" height="130">
+                    </div>
+
+                    <div class="team" data-specialization="уход">
+                        <h3 class="feedback">Сувилагч Ариунцэцэг Д.</h3>
+                        <p>Главная медсестра. Ответственна за уход и поддержку пациентов.</p>
+                        <p><strong>Тел:</strong> +976 7711 6677</p>
+                        <img src="img/letoltes.jpeg" alt="Description of image" width="100" height="130">
+                    </div>    
+
+                    <div class="team" data-specialization="кардиология">
+                        <h3 class="feedback">Др. Аманбол Жолдасов</h3> 
+                        <p>Кардиолог. Специализация в диагностике и лечении сердечно-сосудистых заболеваний.</p>
+                        <p><strong>Тел:</strong> +976 5566 4905</p>
+                        <img src="img/hujintao.jpeg" alt="Description of image" width="100" height="130">
+                    </div>
+
+                    <div class="team" data-specialization="психотерапия">
+                        <h3 class="feedback">Др. Амангельды Плеханов</h3> 
+                        <p>Психотерапевт. Помогает справиться с тревожностью, стрессом и психосоматическими расстройствами. Принимает взрослых и подростков.</p>
+                        <p><strong>Тел:</strong> +976 9933 1201</p>
+                        <img src="img/naruhito.jpg" alt="Dr. Plekhanov" width="135" height="175">
+                    </div>
+
+                    <div class="team" data-specialization="неврология">
+                        <h3 class="feedback">Др. Евгений Сухбатор</h3> 
+                        <p>Невропатолог. Специализируется на лечении головных болей, невритов, остеохондроза и нарушений сна.</p>
+                        <p><strong>Тел:</strong> +976 8877 3344</p>
+                        <img src="img/ysy.jpg" alt="Dr. Sukhbator" width="135" height="150">
+                    </div>
+
+                    <div class="team" data-specialization="гастроэнтерология">
+                        <h3 class="feedback">Др. Иван Ким</h3> 
+                        <p>Гастроэнтеролог. Лечение заболеваний желудочно-кишечного тракта, диагностика пищевых аллергий и СРК.</p>
+                        <p><strong>Тел:</strong> +976 8844 9900</p>
+                        <img src="img/tsydenov.jpg" alt="Dr. Kim" width="120" height="150">
+                    </div>
+
+                    <div class="team" data-specialization="остеопатия">
+                        <h3 class="feedback">Др. Иоганн Алтан</h3> 
+                        <p>Остеопат-вертебролог. Проводит мануальную терапию при болях в спине, нарушениях осанки и последствиях травм.</p>
+                        <p><strong>Тел:</strong> +976 9966 7722</p>
+                        <img src="img/aysen.jpg" alt="Dr. Altan" width="165" height="150">
+                    </div>
+
+                    <div class="team" data-specialization="хирургия">
+                        <h3 class="feedback">Др. Ганс Кусаки</h3> 
+                        <p>Хирург. Более 15 лет опыта. Проводит амбулаторные операции, перевязки и удаление новообразований.</p>
+                        <p><strong>Тел:</strong> +976 7766 1199</p>
+                        <img src="img/hovalig.jpg" alt="Dr. Kusaki" width="110" height="150">
+                    </div>
+
+                    <div class="team" data-specialization="педиатрия">
+                        <h3 class="feedback">Др. Винченцо Леонов</h3> 
+                        <p>Педиатр. Наблюдение за развитием детей, вакцинация, лечение ОРВИ и хронических заболеваний у детей.</p>
+                        <p><strong>Тел:</strong> +976 8822 4400</p>
+                        <img src="img/monh.jpeg" alt="Dr. Leonov" width="120" height="150">
+                    </div>
                 </section>
-                <section class="team">
-                    <h3 class="feedback">Др. Лайош Пак 🇰🇷</h3> 
-                    <p>Кардиолог. Специализация в диагностике и лечении сердечно-сосудистых заболеваний.</p>
-                    <p><strong>Тел:</strong> +976 8811 4455</p>
-                    <img src="img/04e8e3f2c58b4aaf8acac7917638d4a5.png" alt="Description of image" width="100" height="130">
-                </section>
-                <section class="team">
-                    <h3 class="feedback">Сувилагч Ариунцэцэг Д. 🇲🇳</h3>
-                    <p>Главная медсестра. Ответственна за уход и поддержку пациентов.</p>
-                    <p><strong>Тел:</strong> +976 7711 6677</p>
-                    <img src="img/letoltes.jpeg" alt="Description of image" width="100" height="130">
-                </section>
+
+                <div id="appoint">
+                    <h3>Форма Записи</h3>
+                    <p>Заполните форму ниже, чтобы записаться на приём:</p>
+                    <form id="appointmentForm">
+                        <label for="name">Имя:</label><br>
+                        <input type="text" id="name" name="name" required><br><br>
+
+                         <label for="email">Номер телефона:</label><br>
+                        <input type="email" id="email" name="email" required><br><br>
+
+                        <label for="message">Комментарий:</label><br>
+                        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+                        <label style="font-size: small;">
+                        <input type="checkbox" id="consent" required>
+                         Заполняя данную форму, Вы соглашаетесь c <a href="#">условиями обработки персональных данных</a>. Мы гарантируем конфиденциальность Вашего обращения!
+                        </label><br><br>
+
+                        <button type="submit">Отправить</button>
+                    </form>
+                </div>
+
             </main>
             <hr>
             <footer class="upfooter">
@@ -77,18 +168,6 @@
         <footer class="lowfooter">
             <p>𑪞 2025 Орон бүхний пролетари нар нэгдэгтүн!</p>
         </footer>
-        
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-    
-        function showNextSlide() {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].classList.add('active');
-        }
-    
-        setInterval(showNextSlide, 3000); // Change every 3 seconds
-    </script>
+    <script src="js/team.js"></script>
     </body>
 </html>

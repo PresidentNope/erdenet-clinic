@@ -1,27 +1,17 @@
-html {
-    width: 100%;
-    max-width: 1920px;
-    max-height: 3000px;
-    margin: 0 auto;
-    font-family: 'Courier New', monospace;
-    background-image: url("img/altbg.png");
-    background-color: rgb(36, 36, 36);
-    color: aliceblue;
-}
-a {
-    color: aliceblue;
-    text-decoration: none;
-}
-body {
-    width:1080px;
-    padding-left: 420px;
-    padding-right: 420px;
-}
 
-.feedback {
-    display:flex;
-    flex-wrap: nowrap;
+@font-face {
+   font-family: Prata;
+   src: url(betutipus/Prata-Regular.ttf);
 }
+/* hyperlink_decoracao */
+a { color: aliceblue; text-decoration: none; }
+
+body { width:1080px; padding-left: 200px; padding-right: 420px; font-family: 'Prata';}
+
+.feedback { display:flex; flex-wrap: nowrap; }
+
+/* feedback on main page */
+
 .feed1 {
     padding-left: 20px;
     width: 400px;
@@ -29,21 +19,27 @@ body {
     margin-left: 20px;
     border-style: solid;
     border-width: 1px;
+    background-color: rgb(44, 62, 60);
 }
+
+/* services and prices on sip page */
+
 .feed2 {
     padding-left: 20px;
-    width: 400px;
-    height: 200px;
+    width: 300px;
+    height: 80px;
     border-style: solid;
     border-width: 1px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    background-color: rgb(44, 62, 60);
 }
 .lowfooter {
     background-color: rgb(186, 248, 240);
     width: 1080px;
-    height: 50px;
-    padding-top: 5px;
-    padding-bottom: 5px;
     text-align: center;
+    align-content: center;
     font-size: smaller;
     color: black;
 }
@@ -82,7 +78,20 @@ abbr {
     border-radius: 5px;
     padding-left: 30px;
     margin-top: 20px;
-    height: 350px;
+    font-size: smaller;
+    width: 500px;
+    height: 380px;
+    background-color: rgb(44, 62, 60);
+    flex: 1 1 calc(50% - 20px); /* Two columns with gap */
+    max-width: calc(50% - 20px);
+    box-sizing: border-box;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 

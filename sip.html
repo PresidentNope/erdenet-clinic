@@ -7,10 +7,20 @@
         <meta name="keywords" content="диагностика, лечение, клиника, эрдэнэт">
         <link rel="stylesheet" href="css/main.css">
         <link rel="icon" type="image/x-icon" href="img/Mn_coa_erdenet.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            html {
+                margin: 0 auto;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                background-image: url("img/altbg.png");
+                background-color: rgb(36, 36, 36);
+                color: aliceblue;
+            }
+        </style>
     </head>
     <body>
             <header>  
-                <h1>Эрдэнэт Клиник</h1>
+                <h1>Эрдэнэт Клиник 𑪞</h1>
                 <img src="img/mongoliin_ulaan_zagalmai_niigemleg.png" alt="Монгольский Красный Крест" width="150" height="150">
                 <div class="feed">
                     <p> 
@@ -23,10 +33,13 @@
                     <img class="slide" src="img/slide2.png" alt="Слайд 2">
                     <img class="slide" src="img/slide3.png" alt="Слайд 3">
                 </div>
-                <nav>
+               <nav>
                     <ul>
                         <li class="menusel">
                             <a href="main.html">Главная</a>
+                        </li>
+                        <li class="menusel">
+                            <a href="team.html#appoint">Запись</a>
                         </li>
                         <li class="menusel">
                             <a href="sip.html">Услуги и Цены</a>
@@ -45,17 +58,17 @@
             <section>
                 <h2>Наши Услуги</h2>
                 <ul>
-                    <li class="menusel2">Общая терапия и консультации</li>
-                    <li class="menusel2">Кардиологическое обследование</li>
-                    <li class="menusel2">УЗИ диагностика</li>
-                    <li class="menusel2">Лабораторные анализы</li>
-                    <li class="menusel2">Прививки и вакцинация</li>
-                    <li class="menusel2">Физиотерапия и реабилитация</li>
-                    <li class="menusel2">Домашние визиты врача</li>
+                    <li class="feed2">Общая терапия и консультации</li>
+                    <li class="feed2">Кардиологическое обследование</li>
+                    <li class="feed2">УЗИ диагностика</li>
+                    <li class="feed2">Лабораторные анализы</li>
+                    <li class="feed2">Прививки и вакцинация</li>
+                    <li class="feed2">Физиотерапия и реабилитация</li>
+                    <li class="feed2">Домашние визиты врача</li>
                 </ul>
             </section>
     
-            <section>
+            <section id="prices">
                 <h2>Цены</h2>
                 <table class="iltavolo">
                     <thead>
@@ -109,18 +122,6 @@
     <footer class="lowfooter">
         <p>𑪞 2025 Орон бүхний пролетари нар нэгдэгтүн!</p>
     </footer>
-    
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-    
-        function showNextSlide() {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].classList.add('active');
-        }
-    
-        setInterval(showNextSlide, 3000); // Change every 3 seconds
-    </script>
+    <script src="js/script.js"></script>
     </body>
 </html>

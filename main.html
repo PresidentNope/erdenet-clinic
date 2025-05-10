@@ -8,11 +8,19 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="icon" type="image/x-icon" href="img/Mn_coa_erdenet.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            html {
+                margin: 0 auto;
+                background-image: url("img/altbg.png");
+                background-color: rgb(36, 36, 36);
+                color: aliceblue;
+            }
+        </style>
     </head>
 
     <body>
             <header>  
-                <h1>Эрдэнэт Клиник</h1>
+                <h1>Эрдэнэт Клиник 𑪞</h1>
                 <img src="img/mongoliin_ulaan_zagalmai_niigemleg.png" alt="Монгольский Красный Крест" width="150" height="150">
                 <div class="feed">
                     <p> 
@@ -25,10 +33,13 @@
                     <img class="slide" src="img/slide2.png" alt="Слайд 2">
                     <img class="slide" src="img/slide3.png" alt="Слайд 3">
                 </div>   
-                <nav>
+               <nav>
                     <ul>
                         <li class="menusel">
                             <a href="main.html">Главная</a>
+                        </li>
+                        <li class="menusel">
+                            <a href="team.html#appoint">Запись</a>
                         </li>
                         <li class="menusel">
                             <a href="sip.html">Услуги и Цены</a>
@@ -101,9 +112,9 @@
 
                         <p><b>Валерий Ким </b></p>
                     </div>
-                    <div class="feed2">
+                    <div class="feed1">
 
-                        <p>Были на приеме с сыном у Колесовой Светланы Владимировны. Вышел я с кабинета успокоившись. Все тщательно у сынa...</p>
+                        <p>Были на приеме с сыном у Сувилагч Ариунцэцэг. Вышел я с кабинета успокоившись. Все тщательно у сынa...</p>
 
                         <p><b>Ажайын Бартанбаатар </b></p>
                     </div>
@@ -122,17 +133,6 @@
     <footer class="lowfooter">
         <p>𑪞 2025 Орон бүхний пролетари нар нэгдэгтүн!</p>
     </footer>
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-    
-        function showNextSlide() {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].classList.add('active');
-        }
-    
-        setInterval(showNextSlide, 3000); // Change every 3 seconds
-    </script>
+    <scrip src="js/main.js"></script>
     </body>
 </html>
