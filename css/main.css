@@ -101,19 +101,59 @@ iframe {
     gap: 20px;
 }
 
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
 
-@media (min-width: 768px) {
-    body {
-        font-size: 18px;
-    }
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
 }
+@media (max-width: 500px) {
+  .slide {
+    width: 100%;
+    height: auto;
+  }
 
-@media (min-width: 1024px) {
-    body {
-        font-size: 20px;
-    }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
+@media (max-width: 600px) {
+  .feedback {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 
+  .feed1 {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .menusel {
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #444;
+  }
+
+  .menusel a {
+    display: block;
+    padding: 10px;
+  }
+}
 .slideshow {
     float: right;
     width: 280px;
