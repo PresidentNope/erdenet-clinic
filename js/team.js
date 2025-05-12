@@ -46,7 +46,6 @@ let currentSlide = 0;
   }
 }
 
-// Initialize filter when page loads
 document.addEventListener('DOMContentLoaded', () => {
   new TeamFilter('#filterInput', '.team');
 });
