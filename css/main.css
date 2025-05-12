@@ -1,7 +1,7 @@
 
 @font-face {
-   font-family: Prata;
-   src: url(betutipus/Prata-Regular.ttf);
+  font-family: Prata;
+  src: url(betutipus/Prata-Regular.ttf);
 }
 /* hyperlink_decoracao */
 a { color: aliceblue; text-decoration: none; }
@@ -144,7 +144,7 @@ iframe {
   }
 
   .menusel {
-    width: 100%;
+    width: 10%;
     text-align: left;
     border-bottom: 1px solid #444;
   }
@@ -153,15 +153,55 @@ iframe {
     display: block;
     padding: 10px;
   }
+  .header {
+    flex-direction: column;
+    text-align: center;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+}
+
+.header nav ul {
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.header nav ul li {
+    margin: 10px 0;
+}    .header {
+  flex-direction: column;
+  text-align: center;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+}
+
+.header nav ul {
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.header nav ul li {
+  margin: 10px 0;
+}
+.slideshow {
+  float: right;
+  width: 50%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  vertical-align: top;
+}
 }
 .slideshow {
     float: right;
     width: 280px;
-    height: 180px;
+    height: 157px;
     overflow: hidden;
     position: relative;
     vertical-align: top;
-    margin-right: 300px;
 }
 
 .slide {
